@@ -364,6 +364,10 @@
 	<script>
 	/* st = $(this).scrollTop()/2
 		$(window).scroll(function(){if(st < 500) $('.parallex').css('top',st)}) */
+
+	var backImg = ${post.image}; 
+	
+		$(".parallex").css({"background":"url(/post/img/"+backImg+")"}); 	
 		
 		 var window = $(window);
 

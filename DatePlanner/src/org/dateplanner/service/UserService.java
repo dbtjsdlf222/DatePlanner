@@ -7,6 +7,7 @@ import org.dateplanner.dao.UsersDAO;
 import org.dateplanner.vo.Page;
 import org.dateplanner.vo.Post;
 import org.dateplanner.vo.User;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -38,7 +39,7 @@ public class UserService {
 		User result = null;
 		
 		User user = usersDAO.selectById(id);
-		if(user != null && user.getKey().equals(password))
+		if(user != null && BCrypt.checkpw(password, user.getKey()))
 			result = user;
 		
 		return result;

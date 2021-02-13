@@ -10,6 +10,7 @@ $('#comment_write').on('submit', '.inputForm', function(e) {
         	$(this).data("boardno"), content:$(this).children("textarea").val() },
         success: function() {
         	$(".form-control").val("");
+        	 location.reload();
         },
         error:function(textStatus, errorThrown){
                alert("죄송합니다\n 예상치 못한 에러가 발생하였습니다.\n 나중에 다시 시도해주세요");
@@ -26,6 +27,7 @@ $('#comment_write').on('submit', '.inputForm', function(e) {
 	    	url:'/post/reCommentInsert',
 	        data: { no:$(this).data("no"), content:$(this).children("input").val(), boardNo:$(this).data("boardno") },
 	        success: function() {
+	        	location.reload();
 	        },
 	        error:function(textStatus, errorThrown){
 	               alert("죄송합니다\n 예상치 못한 에러가 발생하였습니다.\n 나중에 다시 시도해주세요");
@@ -38,11 +40,15 @@ $('#comment_write').on('submit', '.inputForm', function(e) {
 //댓글 수정
 	$('#comment_wrap').on('submit', '.updateForm', function(e) {
 	    e.preventDefault();
-	   	alert("수정될 값" + $(this).children("input").val());
 	    $.ajax({
 	    	url:'/post/commentUpdate',
-	        data: { data, content:$(this).children("input").val() },
+	        data: {
+		         content:$(this).children("input").val(),
+		         no:$(this).children("input").val(),
+		         orderNo:$(this).children("input").val()
+	        },
 	        success: function() {
+	        	location.reload();
 	        },
 	        error:function(textStatus, errorThrown){
 	               alert("죄송합니다\n 예상치 못한 에러가 발생하였습니다.\n 나중에 다시 시도해주세요");
@@ -60,6 +66,7 @@ $('#comment_write').on('submit', '.inputForm', function(e) {
 	        	url:'/post/commentDelete',
 	            data: { no:$(this).data("no"), orderNo:$(this).data("orderno") },
 	            success: function() {
+	            	location.reload();
 	            },
 	            error:function(textStatus, errorThrown){
 	                   alert("죄송합니다\n 예상치 못한 에러가 발생하였습니다.\n 나중에 다시 시도해주세요");
@@ -128,13 +135,13 @@ var likeCheck = ${likeCheck};
 			$('.parallex').css('top', $(window).scrollTop() / 2);
 		} //if
 	});
-	
+
+	$(".parallex").css({"background":"url(/post/img/${post.image})"});
 	
 //대댓글 불러오기
-	$.ajax({
+	/* $.ajax({
 		url:'/post/reCommentSelect',
 		type:'GET',
-		data:no:/* 불러올 대댓글의 부모 no */,
 		success:function(data){
 			//불러온 값들 처리방법
 		},
@@ -142,6 +149,6 @@ var likeCheck = ${likeCheck};
               alert("죄송합니다\n 예상치 못한 에러가 발생하였습니다.\n 나중에 다시 시도해주세요");
               self.close();
        }
-	});
+	}); */
 	
 </script>

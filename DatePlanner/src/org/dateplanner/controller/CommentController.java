@@ -55,7 +55,7 @@ public class CommentController {
 	
 	@RequestMapping("commentUpdate")
 	public ResponseEntity<String> commentUpdate(int orderNo, int no, String content) throws IOException{	
-		return JsonUtil.convertToResponseEntity(commentService.deleteComment(new Comment(no, orderNo, content)));
+		return JsonUtil.convertToResponseEntity(commentService.updateCommtent(new Comment(no, orderNo, content)));
 	}
 	
 } //class CommentController;

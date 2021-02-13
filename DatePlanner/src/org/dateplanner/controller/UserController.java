@@ -12,6 +12,7 @@ import org.dateplanner.util.JsonUtil;
 import org.dateplanner.util.RedirectWithAlert;
 import org.dateplanner.vo.Page;
 import org.dateplanner.vo.User;
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -39,7 +40,7 @@ public class UserController {
 	@RequestMapping(path = "doJoin", params = { "id", "password", "name", "nickname", "regionNo", "profile", "introduction" })
 	public ModelAndView doJoin(@ModelAttribute User user, String password) {
 
-		user.setKey(password);
+		user.setKey(BCrypt.hashpw(password, BCrypt.gensalt()));
 		
 		RedirectWithAlert redirect = new RedirectWithAlert("회원가입 - DatePlanner");
 		

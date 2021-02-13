@@ -51,7 +51,8 @@
 		$('form').submit(function(e){
 			if($inputTitle.val().length < 5 || $inputTitle.val().length > 50){ alert("제목은 5자에서 50자여야 합니다."); return false; }
 			if($inputContent.val().length < 10 || $inputContent.val().length > 2000){ alert("내용은 10자에서 2000자 사이여야 합니다."); return false; }
-			$(this).submit(function(e){e.preventDefault()})}
+			$(this).submit(function(e){e.preventDefault()})
+			
 		})
 		
 		var $image = $('#image'),

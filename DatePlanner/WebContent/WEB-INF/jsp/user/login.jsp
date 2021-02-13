@@ -49,12 +49,5 @@
     </div>
 </div>
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="../js/sha512.js"></script>
-<script>
-    var $password = $('#password');
-    $('#loginForm').submit(function(e) { $password.val(sha512($password.val())); }); /* 비밀번호 암호화 */
-</script>
-
 </body>
 </html>

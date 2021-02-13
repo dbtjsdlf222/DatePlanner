@@ -14,9 +14,9 @@
   </bean>
   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	<property name="url" value="jdbc:mysql://laziness.me/date_planner?useSSL=false"/>
-	<property name="username" value="root"/>
-	<property name="password" value="3B2}|9TYe{|[:2W!_qG>CYA|6QTD!O?gURDw2"/>
+	<property name="url" value="jdbc:mysql://sunx.cafe24.com/sunx?useSSL=false"/>
+	<property name="username" value="sunx"/>
+	<property name="password" value="sun123@@"/>
   </bean>
 
   <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
