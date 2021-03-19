@@ -8,6 +8,6 @@
 SQL.Controller, Service, VO, DAO, Interceptor, Ajax, JSTL를 담당하였습니다.
 
 
-https://user-images.githubusercontent.com/34783191/111851076-55d24080-8955-11eb-94ce-6287c84ff640.png
+<img src="https://user-images.githubusercontent.com/34783191/111851076-55d24080-8955-11eb-94ce-6287c84ff640.png" alt="mypage"/>
 
-https://user-images.githubusercontent.com/34783191/111851122-7d290d80-8955-11eb-9d47-18fe4ec6de2c.png
+<img src="https://user-images.githubusercontent.com/34783191/111851122-7d290d80-8955-11eb-9d47-18fe4ec6de2c.png" alt="mypage"/>
