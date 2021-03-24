@@ -5,7 +5,7 @@
 여러 게시물을 묶을 수 있는 패키징 기능과
 인스타를 연상케하는 마이페이지가 특징 입니다.
 
-SQL.Controller, Service, VO, DAO, Interceptor, Ajax, JSTL를 담당하였습니다.
+SQL, Controller, Service, VO, DAO, Interceptor, Ajax, JSTL를 담당하였습니다.
 
 
 <img src="https://user-images.githubusercontent.com/34783191/111851076-55d24080-8955-11eb-94ce-6287c84ff640.png" alt="mypage"/>
