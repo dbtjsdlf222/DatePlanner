@@ -8,7 +8,6 @@
 - Jquery
 
 <h2> Spring MVC2 게시판입니다.</h2>
-<a href="https://docs.google.com/presentation/d/14Rvj1AlGiTnuwJ-zpfFTIJxk94P1sUg5yzIsL5Ryf1E/edit?usp=sharing">PPT링크</a>
 <p>여러 게시물을 묶어 한 게시글로 작성 할 수 있는 패키징 기능과
 인스타를 연상케하는 마이페이지가 특징 입니다.</p>
 
